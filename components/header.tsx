@@ -97,13 +97,7 @@ export default function Header() {
             >
               NCAC.ORG
             </a>
-            <Link
-              href="#"
-              className="bg-secondary hover:bg-secondary/90 text-white font-bold py-2 px-4 rounded-full transition-colors text-center"
-            >
-              DONATE NOW
-            </Link>
-          </div>
+           
         )}
       </nav>
     </header>
