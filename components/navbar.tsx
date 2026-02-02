@@ -44,7 +44,7 @@ export default function Navbar() {
               onClick={() => scrollToSection('transactions')}
               className="text-foreground hover:text-primary font-black transition-all text-xs md:text-sm uppercase tracking-widest hover:scale-110 md:hover:scale-125 hover:rotate-2 md:hover:rotate-3 hover:bg-accent/20 px-1.5 md:px-2 py-0.5 md:py-1 rounded-full"
             >
-              Donate
+              Donations
             </button>
             <a
               href="https://ncac.org"

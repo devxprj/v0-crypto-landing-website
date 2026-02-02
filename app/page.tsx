@@ -16,7 +16,6 @@ export default function Home() {
       <AboutSection />
       <CartoonDivider />
       <TransactionsSection />
-      <CartoonDivider />
       <Footer />
     </main>
   )
