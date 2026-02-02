@@ -16,11 +16,11 @@ export default function HeroSection() {
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-4">
                 <span className="text-blue-600">Buy</span>
                 <span className="text-red-500"> The</span>
-                <span className="text-secondary"> Children</span>
+                <span className="text-primary-foreground"> Children</span>
               </h1>
               <p className="text-xl font-bold">
                 <span className="text-green-500">100% of rewards</span>
-                <span className="text-slate-800"> donated</span>
+                <span className="text-primary-foreground"> donated</span>
                 <span className="text-blue-600"> to prevent</span>
                 <span className="text-red-500"> child abuse</span>
                 <span className="text-purple-600"> (NCAC)</span>
