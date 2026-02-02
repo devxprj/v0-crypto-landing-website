@@ -16,15 +16,15 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-2xl px-4">
+    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-3xl px-4">
       {/* Curved navbar background */}
-      <div className="bg-white rounded-full shadow-lg border border-gray-200 backdrop-blur-md">
+      <div className="bg-white rounded-full shadow-lg border border-gray-200 backdrop-blur-md transition-all duration-300">
         <div className="flex items-center justify-between px-6 py-3">
           {/* Logo Avatar */}
           <Link href="#hero" className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('hero')}
-              className="w-12 h-12 rounded-full overflow-hidden bg-orange-500 flex items-center justify-center border-2 border-orange-500 hover:shadow-lg transition-all hover:scale-105"
+              className="w-12 h-12 rounded-full overflow-hidden bg-orange-500 flex items-center justify-center border-2 border-orange-500 hover:shadow-lg transition-transform hover:scale-105"
             >
               <Image
                 src="/images/image.png"
@@ -38,24 +38,15 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection('charity')}
-              className="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-            >
-              Charity
-            </button>
-            <button
-              onClick={() => scrollToSection('transactions')}
-              className="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-            >
-              Transactions
-            </button>
+            {['about', 'charity', 'transactions'].map((section) => (
+              <button
+                key={section}
+                onClick={() => scrollToSection(section)}
+                className="text-gray-700 hover:text-orange-500 font-medium transition-colors"
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </button>
+            ))}
           </div>
 
           {/* Social Links */}
@@ -76,7 +67,8 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-orange-500"
+            className="md:hidden p-2 text-gray-700 hover:text-orange-500 transition-colors"
+            aria-label="Toggle Menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -85,36 +77,29 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden border-t border-gray-200 px-6 py-4 space-y-3">
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ${
+            isOpen ? 'max-h-96 py-4 px-6' : 'max-h-0 py-0 px-6'
+          }`}
+        >
+          {['about', 'charity', 'transactions'].map((section) => (
             <button
-              onClick={() => scrollToSection('about')}
+              key={section}
+              onClick={() => scrollToSection(section)}
               className="block w-full text-left text-gray-700 hover:text-orange-500 font-medium py-2"
             >
-              About
+              {section.charAt(0).toUpperCase() + section.slice(1)}
             </button>
-            <button
-              onClick={() => scrollToSection('charity')}
-              className="block w-full text-left text-gray-700 hover:text-orange-500 font-medium py-2"
-            >
-              Charity
-            </button>
-            <button
-              onClick={() => scrollToSection('transactions')}
-              className="block w-full text-left text-gray-700 hover:text-orange-500 font-medium py-2"
-            >
-              Transactions
-            </button>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-gray-700 hover:text-orange-500 font-medium py-2"
-            >
-              Twitter
-            </a>
-          </div>
-        )}
+          ))}
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-gray-700 hover:text-orange-500 font-medium py-2"
+          >
+            Twitter
+          </a>
+        </div>
       </div>
     </nav>
   )
