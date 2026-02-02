@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react'
 import { Card } from '@/components/ui/card'
 import { AlertCircle, Loader2 } from 'lucide-react'
+import { fetchCharityTransactions } from '@/app/actions/transactions'
+
+const CHARITY_WALLET = 'HfkWUhNFakpU2eHEpSHjHP5a8Fnpa61Rp93Pf3L2xAMf'
 
 interface Transaction {
   signature: string
@@ -12,48 +15,23 @@ interface Transaction {
   to: string
 }
 
-const CHARITY_WALLET = 'HfkWUhNFakpU2eHEpSHjHP5a8Fnpa61Rp93Pf3L2xAMf'
-
 export default function TransactionsSection() {
   const [transactions, setTransactions] = useState<Transaction[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    const fetchTransactions = async () => {
+    const loadTransactions = async () => {
       try {
         setLoading(true)
-        const apiKey = process.env.NEXT_PUBLIC_HELIUS_API_KEY
+        const { transactions: data, error: fetchError } = await fetchCharityTransactions()
 
-        if (!apiKey) {
-          setError('Helius API key not configured')
-          setLoading(false)
-          return
+        if (fetchError) {
+          setError(fetchError)
+        } else {
+          setTransactions(data)
+          setError(null)
         }
-
-        const response = await fetch(
-          `https://api.helius.xyz/v0/addresses/${CHARITY_WALLET}/transactions?api-key=${apiKey}&limit=10`
-        )
-
-        if (!response.ok) {
-          throw new Error('Failed to fetch transactions')
-        }
-
-        const data = await response.json()
-
-        // Transform and filter transactions
-        const formattedTransactions: Transaction[] = data
-          .slice(0, 5)
-          .map((tx: any) => ({
-            signature: tx.signature,
-            amount: Math.random() * 1000, // Mock amount for demo
-            timestamp: tx.timestamp * 1000,
-            from: tx.source?.slice(0, 6) + '...' + tx.source?.slice(-6) || 'Unknown',
-            to: tx.feePayer?.slice(0, 6) + '...' + tx.feePayer?.slice(-6) || 'Unknown',
-          }))
-
-        setTransactions(formattedTransactions)
-        setError(null)
       } catch (err) {
         setError('Unable to fetch live transactions')
         console.error('Transaction fetch error:', err)
@@ -62,10 +40,10 @@ export default function TransactionsSection() {
       }
     }
 
-    fetchTransactions()
+    loadTransactions()
 
     // Auto-refresh every 15 seconds
-    const interval = setInterval(fetchTransactions, 15000)
+    const interval = setInterval(loadTransactions, 15000)
     return () => clearInterval(interval)
   }, [])
 
