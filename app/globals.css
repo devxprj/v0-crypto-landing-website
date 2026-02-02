@@ -160,6 +160,33 @@
   }
 }
 
+@keyframes dotMove1 {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+@keyframes dotMove2 {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-6px) scale(0.9);
+  }
+}
+
+@keyframes dotMove3 {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.15);
+  }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
