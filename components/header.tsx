@@ -59,12 +59,7 @@ export default function Header() {
           </div>
 
           {/* Donate Button - Desktop */}
-          <Link
-            href="#"
-            className="hidden md:block bg-secondary hover:bg-secondary/90 text-white font-bold py-2 px-6 rounded-full transition-colors shadow-md"
-          >
-            DONATE NOW
-          </Link>
+          
 
           {/* Mobile Menu Button */}
           <button
