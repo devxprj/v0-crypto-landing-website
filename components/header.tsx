@@ -32,24 +32,24 @@ export default function Header() {
           </Link>
 
           {/* Navigation Links */}
-          <div className="flex items-center gap-4 md:gap-8">
+          <div className="flex items-center gap-2 md:gap-6">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary font-black transition-all text-xs md:text-sm uppercase tracking-wider hover:scale-110 hover:-rotate-2"
+              className="text-foreground hover:text-primary font-black transition-all text-xs md:text-sm uppercase tracking-wider hover:scale-125 hover:-rotate-3 hover:bg-accent/20 px-2 py-1 rounded-full"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('transactions')}
-              className="text-foreground hover:text-primary font-black transition-all text-xs md:text-sm uppercase tracking-wider hover:scale-110 hover:-rotate-2"
+              className="text-foreground hover:text-primary font-black transition-all text-xs md:text-sm uppercase tracking-wider hover:scale-125 hover:rotate-3 hover:bg-accent/20 px-2 py-1 rounded-full"
             >
-              Donations
+              Donate
             </button>
             <a
               href="https://ncac.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:text-primary font-black transition-all text-xs md:text-sm uppercase tracking-wider hover:scale-110 hover:-rotate-2"
+              className="text-foreground hover:text-primary font-black transition-all text-xs md:text-sm uppercase tracking-wider hover:scale-125 hover:-rotate-3 hover:bg-accent/20 px-2 py-1 rounded-full"
             >
               NCAC
             </a>

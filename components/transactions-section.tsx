@@ -3,9 +3,6 @@
 export default function TransactionsSection() {
   return (
     <>
-      {/* Playful Divider */}
-      <div className="h-6 bg-gradient-to-r from-secondary via-primary to-accent"></div>
-
       <section id="transactions" className="py-20 md:py-32 px-4 bg-background relative overflow-hidden">
         {/* Playful Background */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
@@ -14,7 +11,7 @@ export default function TransactionsSection() {
         <div className="container mx-auto flex flex-col items-center relative z-10">
           <h2 className="text-5xl md:text-6xl font-black text-center mb-4 leading-tight">
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent block">Live Donations</span>
-            <span className="text-foreground">Keep It Growing! 📈</span>
+            <span className="text-foreground">Watch it Happen!</span>
           </h2>
 
           <p className="text-center text-xl font-bold text-foreground mb-12 max-w-2xl">

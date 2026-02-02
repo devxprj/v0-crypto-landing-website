@@ -113,9 +113,6 @@ export default function HeroSection() {
           </div>
         </div>
       </section>
-
-      {/* Playful Divider */}
-      <div className="h-6 bg-gradient-to-r from-primary via-accent to-secondary"></div>
     </>
   )
 }

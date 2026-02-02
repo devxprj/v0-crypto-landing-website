@@ -5,9 +5,6 @@ import Link from 'next/link'
 export default function AboutSection() {
   return (
     <>
-      {/* Playful Divider */}
-      <div className="h-6 bg-gradient-to-r from-primary via-accent to-secondary"></div>
-
       <section
         id="about"
         className="relative py-20 md:py-32 px-4 
