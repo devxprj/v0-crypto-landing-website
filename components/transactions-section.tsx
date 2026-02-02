@@ -22,7 +22,7 @@ export default function TransactionsSection() {
           <div className="w-full max-w-4xl">
             <div className="relative border-4 border-primary rounded-2xl md:rounded-3xl overflow-hidden shadow-lg md:shadow-2xl hover:shadow-2xl md:hover:shadow-3xl transition-shadow" style={{ paddingTop: '102%', maxHeight: '400px' }}>
               <iframe
-                src="https://solana-sight-glow.lovable.app/"
+                src="https://glow-sight-sparkle.lovable.app"
                 className="absolute top-0 left-0 w-full h-full"
                 allow="fullscreen"
                 title="Solana Transactions"
