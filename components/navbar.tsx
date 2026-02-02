@@ -18,7 +18,8 @@ export default function Navbar() {
   return (
     <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-3xl px-4">
       {/* Navbar container */}
-      <div className="bg-white shadow-lg border border-gray-200 backdrop-blur-md transition-all duration-300 rounded-full md:rounded-full">
+      <div className="bg-white shadow-lg border border-gray-200 backdrop-blur-md transition-all duration-300 rounded-full md:rounded-full md:overflow-visible">
+        {/* Top bar */}
         <div className="flex items-center justify-between px-6 py-3">
           {/* Logo */}
           <Link href="#hero" className="flex-shrink-0">
@@ -76,7 +77,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile menu as list */}
+        {/* Mobile menu */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ${
             isOpen ? 'max-h-60 py-4' : 'max-h-0 py-0'
