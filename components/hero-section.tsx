@@ -5,20 +5,23 @@ import { Button } from '@/components/ui/button'
 
 export default function HeroSection() {
   return (
-    <section className="py-20 md:py-32 px-4 border-b border-border">
+    <section id="hero" className="pt-40 pb-20 md:py-40 px-4 border-b border-border">
       <div className="container mx-auto max-w-4xl text-center">
         <div className="mb-8 inline-block">
-          <div className="text-6xl md:text-7xl font-bold tracking-tighter mb-4">
-            BTC – Buy The Children
+          <div className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 text-foreground">
+            BTC
+          </div>
+          <div className="text-xl md:text-2xl font-semibold text-primary mb-2">
+            Buy The Children
           </div>
         </div>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-          100% of developer fees donated to charity
+        <p className="text-lg md:text-2xl font-semibold text-primary mb-8 leading-relaxed">
+          100% of fees donated to charity
         </p>
         
         <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-          A community-driven crypto token dedicated to supporting the National Children's Advocacy Center, preventing child abuse and protecting vulnerable children.
+          A fun, community-driven crypto token supporting the National Children's Advocacy Center, dedicated to preventing child abuse and protecting vulnerable children.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
