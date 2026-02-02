@@ -77,25 +77,10 @@ export default function Navbar() {
             href="https://ncac.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="block px-6 py-4 font-bold text-gray-800 hover:bg-gray-50 transition-colors border-b-4 border-green-500"
+            className="block px-6 py-4 font-bold text-gray-800 hover:bg-gray-50 transition-colors"
           >
             NCAC.ORG
           </a>
-
-          {/* Donate Button */}
-          <div className="px-6 py-5">
-            <Link
-              href="#donate"
-              className="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-colors text-center shadow-md"
-            >
-              DONATE NOW
-            </Link>
-          </div>
-        </div>
-
-        {/* Tagline */}
-        <div className="px-6 py-4 text-center text-sm text-gray-600 border-t-4 border-green-500">
-          Holders become part of a mission focused on care, trust, and change.
         </div>
       </div>
     </nav>
