@@ -43,25 +43,9 @@ export default function AboutSection() {
 
             {/* Right Stats Box */}
             <div className="flex flex-col gap-6">
-              <div className="bg-white rounded-3xl border-4 border-secondary p-8">
-                <p className="text-sm font-bold text-secondary mb-4 text-center">THE TRUTH • EVIDENCE • NCAC.ORG</p>
-                <p className="text-center font-black text-xl text-foreground">
-                  Join the movement reclaiming crypto for good
-                </p>
-              </div>
+              
 
-              <div className="bg-white rounded-3xl border-4 border-secondary p-8">
-                <div className="text-center">
-                  <p className="text-sm font-bold text-secondary mb-3">TOTAL DONATION WALLET FUNDS</p>
-                  <div className="flex items-center justify-center gap-3 mb-2">
-                    <span className="text-4xl">💰</span>
-                    <p className="text-4xl font-black text-secondary">25.7101 SOL</p>
-                  </div>
-                  <code className="text-xs text-muted-foreground block mt-4 truncate">
-                    HfkWUhNFakpU2eHEpSHjHP5a8Fnpa61Rp93Pf3L2xAMf
-                  </code>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
