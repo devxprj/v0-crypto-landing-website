@@ -8,11 +8,11 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'BTC – Buy The Children | Charity-Focused Crypto',
-  description: '100% of developer fees donated to charity. Support the National Children\'s Advocacy Center through crypto.',
+  title: 'BTC',
+  description: 'Donating 100% of the fees to charity',
   generator: 'v0.app',
   icons: {
-    icon: '/image.png',
+    icon: '/images/btc.png',
   },
   viewport: {
     width: 'device-width',

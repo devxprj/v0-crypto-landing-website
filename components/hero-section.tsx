@@ -1,41 +1,75 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="pt-40 pb-20 md:py-40 px-4 border-b border-border">
-      <div className="container mx-auto max-w-4xl text-center">
-        <div className="mb-8 inline-block">
-          <div className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 text-foreground">
-            BTC
+    <section id="hero" className="min-h-screen flex items-center justify-center px-4 pt-32 pb-20">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left Content */}
+          <div className="flex flex-col justify-center">
+            <div className="mb-8">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-4">
+                <span className="text-blue-600">Buy</span>
+                <span className="text-red-500"> The</span>
+                <span className="text-yellow-500"> Children</span>
+              </h1>
+              <p className="text-xl font-bold text-yellow-500">100% of rewards donated to prevent child abuse (NCAC).</p>
+            </div>
+
+            <p className="text-base md:text-lg text-foreground mb-8 leading-relaxed font-semibold max-w-lg">
+              Epstein financed 75% of Bitcoin. The code is compromised. We are reclaiming the narrative.
+            </p>
+
+            {/* Contract Address Box */}
+            <div className="bg-white rounded-3xl border-4 border-secondary p-6 mb-8 max-w-lg">
+              <p className="text-xs font-bold text-secondary mb-2">CA:</p>
+              <div className="flex items-center gap-3">
+                <code className="text-sm font-mono text-foreground truncate flex-1">
+                  7p8hs6fZwTXvSYESCdHgWCXVsVcxTrX1cs3Q4yNGpu...
+                </code>
+                <button className="bg-secondary hover:bg-secondary/90 text-white font-bold py-2 px-4 rounded-full transition-colors text-sm whitespace-nowrap">
+                  COPY
+                </button>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="https://pump.fun" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full text-lg py-6 px-8">
+                  BUY
+                </Button>
+              </Link>
+              <Link href="https://dexscreener.com" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-bold rounded-full text-lg py-6 px-8">
+                  CHART
+                </Button>
+              </Link>
+            </div>
           </div>
-          <div className="text-xl md:text-2xl font-semibold text-primary mb-2">
-            Buy The Children
+
+          {/* Right Image */}
+          <div className="flex justify-center items-center">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+              <div className="absolute inset-0 bg-white rounded-full border-8 border-white shadow-2xl flex items-center justify-center">
+                <Image
+                  src="/images/btc.png"
+                  alt="BTC - Buy The Children"
+                  fill
+                  className="object-contain p-8"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-yellow-400 text-black font-black px-6 py-3 rounded-full border-4 border-black rotate-12 shadow-lg text-lg">
+                100% DONATED
+              </div>
+              <div className="absolute -top-4 -right-8 bg-yellow-400 text-black font-black px-5 py-2 rounded-full border-4 border-black -rotate-12 shadow-lg text-sm">
+                FOR THE KIDS
+              </div>
+            </div>
           </div>
-        </div>
-        
-        <p className="text-lg md:text-2xl font-semibold text-primary mb-8 leading-relaxed">
-          100% of fees donated to charity
-        </p>
-        
-        <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-          A fun, community-driven crypto token supporting the National Children's Advocacy Center, dedicated to preventing child abuse and protecting vulnerable children.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link href="https://dexscreener.com/solana/6GYDFqr1tmJgRAuxZmK1LNqfUGK8TNM8YrGrFJZ9r2So" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="w-full sm:w-auto bg-primary text-primary-foreground hover:opacity-90 font-semibold">
-              View on DexScreener
-            </Button>
-          </Link>
-          
-          <Link href="https://pump.fun/coin/7p8hs6fZwTXvSYESCdHgWCXVsVcxTrX1cs3Q4yNGpump" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold bg-transparent">
-              Buy on Pump.fun
-            </Button>
-          </Link>
         </div>
       </div>
     </section>
