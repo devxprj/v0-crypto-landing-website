@@ -38,13 +38,13 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
-            {['about', 'charity', 'transactions'].map((section) => (
+            {['about', 'transactions', 'ncac.org'].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
                 className="text-gray-700 hover:text-orange-500 font-medium transition-colors"
               >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
+                {section.toUpperCase()}
               </button>
             ))}
           </div>
@@ -76,29 +76,34 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile menu as list */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isOpen ? 'max-h-96 py-4 px-6 rounded-b-3xl' : 'max-h-0 py-0 px-6'
-          } bg-white border-t border-gray-200`}
+            isOpen ? 'max-h-60 py-4' : 'max-h-0 py-0'
+          } bg-white border-t border-gray-200 rounded-b-3xl`}
         >
-          {['about', 'charity', 'transactions'].map((section) => (
-            <button
-              key={section}
-              onClick={() => scrollToSection(section)}
-              className="block w-full text-left text-gray-700 hover:text-orange-500 font-medium py-2"
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </button>
-          ))}
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block text-gray-700 hover:text-orange-500 font-medium py-2"
-          >
-            Twitter
-          </a>
+          <ul className="flex flex-col gap-2 px-4">
+            {['about', 'transactions', 'ncac.org'].map((section) => (
+              <li key={section}>
+                <button
+                  onClick={() => scrollToSection(section)}
+                  className="w-full text-left text-gray-700 hover:text-orange-500 font-medium py-2"
+                >
+                  {section.toUpperCase()}
+                </button>
+              </li>
+            ))}
+            <li>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full block text-left text-gray-700 hover:text-orange-500 font-medium py-2"
+              >
+                Twitter
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
