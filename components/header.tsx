@@ -58,12 +58,7 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex items-center">
-            <Link
-              href="#donate"
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full transition-colors"
-            >
-              DONATE NOW
-            </Link>
+            
           </div>
 
           <button
