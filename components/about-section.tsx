@@ -45,7 +45,7 @@ export default function AboutSection() {
                 <p>
                   In honor of the victims,{' '}
                   <span className="text-orange-600 font-black">
-                    100% of developer fees
+                    100% of  fees
                   </span>{' '}
                   are donated to <strong>NCAC</strong>, an organization dedicated
                   to preventing child abuse and protecting children worldwide.
