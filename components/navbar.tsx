@@ -17,10 +17,10 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-3xl px-4">
-      {/* Curved navbar background */}
-      <div className="bg-white rounded-full shadow-lg border border-gray-200 backdrop-blur-md transition-all duration-300">
+      {/* Navbar container */}
+      <div className="bg-white shadow-lg border border-gray-200 backdrop-blur-md transition-all duration-300 rounded-full md:rounded-full">
         <div className="flex items-center justify-between px-6 py-3">
-          {/* Logo Avatar */}
+          {/* Logo */}
           <Link href="#hero" className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('hero')}
@@ -36,7 +36,7 @@ export default function Navbar() {
             </button>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
             {['about', 'charity', 'transactions'].map((section) => (
               <button
@@ -49,7 +49,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Social Links */}
+          {/* Social icons */}
           <div className="hidden md:flex items-center gap-4">
             <a
               href="https://twitter.com"
@@ -64,7 +64,7 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-gray-700 hover:text-orange-500 transition-colors"
@@ -76,11 +76,11 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile menu */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isOpen ? 'max-h-96 py-4 px-6' : 'max-h-0 py-0 px-6'
-          }`}
+            isOpen ? 'max-h-96 py-4 px-6 rounded-b-3xl' : 'max-h-0 py-0 px-6'
+          } bg-white border-t border-gray-200`}
         >
           {['about', 'charity', 'transactions'].map((section) => (
             <button
