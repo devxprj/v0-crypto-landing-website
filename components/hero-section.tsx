@@ -6,7 +6,8 @@ import { Button } from '@/components/ui/button'
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-4 pt-32 pb-20">
+    <>
+      <section id="hero" className="min-h-screen flex items-center justify-center px-4 pt-32 pb-20 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
@@ -56,7 +57,7 @@ export default function HeroSection() {
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
               <div className="absolute inset-0 bg-white rounded-full border-8 border-white shadow-2xl flex items-center justify-center">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/download%20%281%29-aZvw69klOitO7UzUyLlUhcIkYBAz3X.png"
+                  src="/images/btc.png"
                   alt="BTC - Buy The Children"
                   fill
                   className="object-contain p-8"
@@ -72,6 +73,10 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+
+      {/* White Divider */}
+      <div className="h-6 bg-white"></div>
+    </>
   )
 }
