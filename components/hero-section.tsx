@@ -56,7 +56,7 @@ export default function HeroSection() {
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
               <div className="absolute inset-0 bg-white rounded-full border-8 border-white shadow-2xl flex items-center justify-center">
                 <Image
-                  src="/images/btc.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/download%20%281%29-aZvw69klOitO7UzUyLlUhcIkYBAz3X.png"
                   alt="BTC - Buy The Children"
                   fill
                   className="object-contain p-8"

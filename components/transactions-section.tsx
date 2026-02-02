@@ -20,39 +20,7 @@ export default function TransactionsSection() {
         </p>
 
         {/* Size Controls */}
-        <div className="bg-white rounded-3xl border-4 border-secondary p-8 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Width Control */}
-            <div>
-              <label className="block font-bold text-lg mb-4 text-foreground">
-                Width: {embedWidth}%
-              </label>
-              <Slider
-                value={[embedWidth]}
-                onValueChange={(value) => setEmbedWidth(value[0])}
-                min={50}
-                max={100}
-                step={5}
-                className="w-full"
-              />
-            </div>
-
-            {/* Height Control */}
-            <div>
-              <label className="block font-bold text-lg mb-4 text-foreground">
-                Height: {Math.round(800 * (embedHeight / 100))}px
-              </label>
-              <Slider
-                value={[embedHeight]}
-                onValueChange={(value) => setEmbedHeight(value[0])}
-                min={40}
-                max={100}
-                step={5}
-                className="w-full"
-              />
-            </div>
-          </div>
-        </div>
+        
 
         {/* Embedded Solana Sight Glow */}
         <div className="flex justify-center">
