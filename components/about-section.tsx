@@ -5,75 +5,82 @@ import Link from 'next/link'
 export default function AboutSection() {
   return (
     <>
-      {/* Soft Divider */}
-      <div className="h-3 bg-gradient-to-r from-blue-200 via-pink-200 to-yellow-200"></div>
+      {/* Orange Divider */}
+      <div className="h-3 bg-gradient-to-r from-orange-400 via-yellow-300 to-orange-400"></div>
 
       <section
         id="about"
-        className="relative py-20 md:py-32 px-4 bg-gradient-to-br from-blue-50 via-pink-50 to-yellow-50 overflow-hidden"
+        className="relative py-20 md:py-32 px-4 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 overflow-hidden"
       >
-        {/* Decorative Elements */}
-        <div className="absolute top-10 left-10 w-24 h-24 bg-pink-200 rounded-full blur-3xl opacity-40" />
-        <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-200 rounded-full blur-3xl opacity-40" />
+        {/* Soft Orange Glows */}
+        <div className="absolute top-12 left-12 w-32 h-32 bg-orange-300 rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-12 right-12 w-40 h-40 bg-amber-300 rounded-full blur-3xl opacity-30" />
 
         <div className="container mx-auto max-w-5xl relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-            {/* Left Content */}
-            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-blue-100">
+            {/* Left Content Card */}
+            <div className="bg-white/90 backdrop-blur rounded-3xl shadow-xl p-8 md:p-10 border border-orange-200">
               <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-                <span className="text-blue-600">About</span>{' '}
-                <span className="text-pink-500">BTC</span>
+                <span className="text-gray-900">About</span>{' '}
+                <span className="text-orange-500">BTC</span>
               </h2>
 
               <div className="space-y-5 text-base md:text-lg leading-relaxed font-semibold text-gray-700">
-                <p className="">
-                  A story surrounding the origins of BTC has gone viral on X,
-                  raising serious conversations about accountability and justice.
+                <p>
+                  Discussions around the origins of BTC have gone viral on X,
+                  bringing renewed attention to responsibility and accountability.
                 </p>
 
                 <p>
-                  BTC is now referred to as <span className="text-blue-600 font-bold">“Buy The Children”</span>,
-                  symbolizing awareness and responsibility.
+                  BTC is now referred to as{' '}
+                  <span className="text-orange-500 font-black">“Buy The Children”</span>,
+                  symbolizing protection, awareness, and action.
                 </p>
 
                 <p>
-                  In honor of the victims, <span className="text-pink-500 font-bold">100% of developer fees</span>
-                  are donated to <strong>NCAC</strong>, an organization dedicated to preventing child abuse and protecting children worldwide.
+                  To honor the victims,{' '}
+                  <span className="text-orange-600 font-black">
+                    100% of developer fees
+                  </span>{' '}
+                  are donated to <strong>NCAC</strong>, an organization dedicated to preventing
+                  child abuse and protecting children worldwide.
                 </p>
 
                 <Link
                   href="https://t.co/7vqarBXxAV"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-md hover:shadow-lg mt-4"
+                  className="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-black py-3 px-8 rounded-full transition-all duration-300 shadow-md hover:shadow-lg mt-4"
                 >
-                  💖 Donate to NCAC
+                  🧡 Donate to NCAC
                 </Link>
               </div>
             </div>
 
-            {/* Right Visual / Stats */}
+            {/* Right BTC Info Cards */}
             <div className="flex flex-col gap-6">
-              <div className="bg-white rounded-3xl p-8 shadow-lg border border-pink-100 text-center">
-                <div className="text-4xl mb-2">🧸</div>
-                <h3 className="text-xl font-black text-blue-600 mb-2">
-                  Protecting Children
+
+              <div className="bg-white rounded-3xl p-8 shadow-lg border border-orange-200 text-center">
+                <div className="text-4xl mb-2">₿</div>
+                <h3 className="text-xl font-black text-orange-500 mb-2">
+                  Bitcoin Impact
                 </h3>
                 <p className="text-gray-600 font-semibold">
-                  Every transaction helps fund prevention, education, and safety.
+                  Every transaction contributes to awareness and child protection.
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-8 shadow-lg border border-blue-100 text-center">
-                <div className="text-4xl mb-2">🌈</div>
-                <h3 className="text-xl font-black text-pink-500 mb-2">
-                  Community Impact
+              <div className="bg-white rounded-3xl p-8 shadow-lg border border-amber-200 text-center">
+                <div className="text-4xl mb-2">🧸</div>
+                <h3 className="text-xl font-black text-amber-500 mb-2">
+                  Protecting Children
                 </h3>
                 <p className="text-gray-600 font-semibold">
-                  Holders become part of a mission focused on care, trust, and change.
+                  A community-driven mission focused on safety, care, and change.
                 </p>
               </div>
+
             </div>
 
           </div>
