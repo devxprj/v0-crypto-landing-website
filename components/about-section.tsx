@@ -6,18 +6,19 @@ export default function AboutSection() {
   return (
     <>
       {/* White Divider */}
-      <div className="h-6 bg-white"></div>
+      <div className="h-3 bg-white"></div>
 
       <section id="about" className="py-20 md:py-32 px-4 bg-background">
         <div className="container mx-auto max-w-4xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground">
+              <h2 className="text-5xl md:text-6xl font-black mb-8 text-foreground leading-tight">
                 <span className="text-blue-600">About</span>
-                <span className="text-red-500"> BTC</span>
+                <br/>
+                <span className="text-red-500">BTC</span>
               </h2>
-              <div className="space-y-6 text-base md:text-lg leading-relaxed font-semibold text-foreground">
+              <div className="space-y-6 text-base md:text-lg leading-relaxed font-bold text-foreground">
                 <p>
                   Jeffrey Epstein being a big part of the creation of BTC is going insanely viral on X. Sources say he financed over 75% of Bitcoin's code with some even speculating he may have been Satoshi.
                 </p>

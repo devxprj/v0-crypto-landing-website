@@ -18,7 +18,13 @@ export default function HeroSection() {
                 <span className="text-red-500"> The</span>
                 <span className="text-yellow-500"> Children</span>
               </h1>
-              <p className="text-xl font-bold text-yellow-500">100% of rewards donated to prevent child abuse (NCAC).</p>
+              <p className="text-xl font-bold">
+                <span className="text-green-500">100% of rewards</span>
+                <span className="text-yellow-500"> donated</span>
+                <span className="text-blue-600"> to prevent</span>
+                <span className="text-red-500"> child abuse</span>
+                <span className="text-purple-600"> (NCAC)</span>
+              </p>
             </div>
 
             <p className="text-base md:text-lg text-foreground mb-8 leading-relaxed font-semibold max-w-lg">
@@ -76,7 +82,7 @@ export default function HeroSection() {
       </section>
 
       {/* White Divider */}
-      <div className="h-6 bg-white"></div>
+      <div className="h-3 bg-white"></div>
     </>
   )
 }
