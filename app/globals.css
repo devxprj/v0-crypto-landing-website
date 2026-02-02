@@ -4,41 +4,41 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* BTC – Buy The Children Theme */
-  /* Vibrant cartoon orange theme with playful rounded elements */
-  --background: #ff9d33;
+  /* Kids Playground Cartoon Bitcoin Theme */
+  /* Vibrant, playful colors perfect for kids - sky blue, rainbow accents, bright and fun */
+  --background: #87CEEB;
   --foreground: #1a1a1a;
   --card: #ffffff;
   --card-foreground: #1a1a1a;
   --popover: #ffffff;
   --popover-foreground: #1a1a1a;
-  --primary: #ff6b35;
+  --primary: #FF1493;
   --primary-foreground: #ffffff;
-  --secondary: #22c55e;
+  --secondary: #00D084;
   --secondary-foreground: #ffffff;
-  --muted: #e5e5e5;
+  --muted: #f0f8ff;
   --muted-foreground: #666666;
-  --accent: #3b82f6;
-  --accent-foreground: #ffffff;
-  --destructive: #ef4444;
+  --accent: #FFD700;
+  --accent-foreground: #1a1a1a;
+  --destructive: #FF6347;
   --destructive-foreground: #ffffff;
   --border: #e0e0e0;
   --input: #f5f5f5;
-  --ring: #ff6b35;
-  --chart-1: #ff6b35;
+  --ring: #FF1493;
+  --chart-1: #FF1493;
   --chart-2: #3b82f6;
-  --chart-3: #22c55e;
-  --chart-4: #f59e0b;
-  --chart-5: #8b5cf6;
-  --radius: 1.5rem;
+  --chart-3: #00D084;
+  --chart-4: #FFD700;
+  --chart-5: #FF6347;
+  --radius: 2rem;
   --sidebar: #ffffff;
   --sidebar-foreground: #1a1a1a;
-  --sidebar-primary: #ff6b35;
+  --sidebar-primary: #FF1493;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #22c55e;
+  --sidebar-accent: #00D084;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #e0e0e0;
-  --sidebar-ring: #ff6b35;
+  --sidebar-ring: #FF1493;
 }
 
 .dark {
@@ -124,4 +124,49 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Playful Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-playful {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-bounce-playful {
+  animation: bounce-playful 2s ease-in-out infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
