@@ -27,7 +27,7 @@ export default function AboutSection() {
               </h2>
 
               <div className="space-y-5 text-base md:text-lg leading-relaxed font-semibold text-gray-700">
-                <p>
+                <p className="">
                   A story surrounding the origins of BTC has gone viral on X,
                   raising serious conversations about accountability and justice.
                 </p>
