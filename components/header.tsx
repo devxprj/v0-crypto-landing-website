@@ -17,44 +17,31 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-md px-4">
-      {/* List-Style Navbar */}
-      <nav className="bg-white rounded-3xl shadow-xl border-4 border-green-500 overflow-hidden">
-        {/* Logo Section */}
-        <div className="flex items-center justify-between px-6 py-3 border-b-2 border-green-500">
-          <Link href="#hero" className="flex-shrink-0">
-            <div className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-full p-1 border-4 border-cyan-400 hover:scale-110 transition-transform shadow-md">
-              <Image
-                src="/images/btc.png"
-                alt="BTC"
-                width={45}
-                height={45}
-                className="rounded-full"
-              />
-            </div>
-          </Link>
-
-          {/* Mobile Menu Button */}
+    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-xs px-4">
+      {/* Minimalist Navbar */}
+      <nav className="bg-black/90 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden">
+        {/* Mobile Menu Button - Top Right */}
+        <div className="md:hidden flex justify-end px-4 pt-3">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground"
+            className="text-white"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Navigation List - Always visible on desktop, toggleable on mobile */}
-        <div className={`${isOpen ? 'block' : 'hidden'} md:block`}>
+        {/* Navigation List */}
+        <div className={`${isOpen ? 'block' : 'hidden'} md:block py-6`}>
           <button
             onClick={() => scrollToSection('about')}
-            className="w-full text-left px-6 py-4 font-bold text-foreground hover:bg-gray-50 transition-colors border-b-2 border-green-500"
+            className="w-full text-center px-6 py-3 font-bold text-white hover:text-green-400 transition-colors"
           >
             About
           </button>
           
           <button
             onClick={() => scrollToSection('transactions')}
-            className="w-full text-left px-6 py-4 font-bold text-foreground hover:bg-gray-50 transition-colors border-b-2 border-green-500"
+            className="w-full text-center px-6 py-3 font-bold text-white hover:text-green-400 transition-colors"
           >
             Transactions
           </button>
@@ -63,25 +50,20 @@ export default function Header() {
             href="https://ncac.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="block px-6 py-4 font-bold text-foreground hover:bg-gray-50 transition-colors border-b-2 border-green-500"
+            className="block text-center px-6 py-3 font-bold text-white hover:text-green-400 transition-colors"
           >
             NCAC.ORG
           </a>
 
           {/* Donate Button */}
-          <div className="px-6 py-4">
+          <div className="px-6 pt-4">
             <Link
-              href="#"
-              className="block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-full transition-colors text-center"
+              href="#donate"
+              className="block bg-white hover:bg-gray-100 text-black font-bold py-3 px-6 rounded-full transition-colors text-center"
             >
               DONATE NOW
             </Link>
           </div>
-        </div>
-
-        {/* Tagline */}
-        <div className="px-6 py-4 text-center text-sm text-gray-600 border-t-2 border-green-500">
-          Holders become part of a mission focused on care, trust, and change.
         </div>
       </nav>
     </header>
