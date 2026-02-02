@@ -48,7 +48,7 @@ export default function AboutSection() {
                 </p>
 
                 <Link
-                  href="https://ncac.org"
+                  href="https://www.nationalcac.org/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center 
