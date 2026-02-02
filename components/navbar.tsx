@@ -17,9 +17,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-xs px-4">
-      {/* Minimalist Navbar */}
       <div className="bg-black/90 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden">
-        {/* Mobile Menu Button - Top Right */}
         <div className="md:hidden flex justify-end px-4 pt-3">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -30,9 +28,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Navigation List */}
         <div className={`${isOpen ? 'block' : 'hidden'} md:block py-6`}>
-          {/* About */}
           <button
             onClick={() => scrollToSection('about')}
             className="w-full text-center px-6 py-3 font-bold text-white hover:text-green-400 transition-colors"
@@ -40,7 +36,6 @@ export default function Navbar() {
             About
           </button>
 
-          {/* Transactions */}
           <button
             onClick={() => scrollToSection('transactions')}
             className="w-full text-center px-6 py-3 font-bold text-white hover:text-green-400 transition-colors"
@@ -48,8 +43,7 @@ export default function Navbar() {
             Transactions
           </button>
 
-          {/* NCAC.ORG */}
-          
+          <a
             href="https://ncac.org"
             target="_blank"
             rel="noopener noreferrer"
@@ -58,7 +52,6 @@ export default function Navbar() {
             NCAC.ORG
           </a>
 
-          {/* Donate Button */}
           <div className="px-6 pt-4">
             <Link
               href="#donate"
