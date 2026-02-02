@@ -45,12 +45,12 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://pump.fun" target="_blank" rel="noopener noreferrer">
+              <Link href="https://pump.fun/coin/7p8hs6fZwTXvSYESCdHgWCXVsVcxTrX1cs3Q4yNGpump" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full text-lg py-6 px-8">
                   BUY
                 </Button>
               </Link>
-              <Link href="https://dexscreener.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://dexscreener.com/solana/6GYDFqr1tmJgRAuxZmK1LNqfUGK8TNM8YrGrFJZ9r2So" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-bold rounded-full text-lg py-6 px-8">
                   CHART
                 </Button>
